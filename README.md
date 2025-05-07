@@ -11,7 +11,7 @@ This project is a web application.
 The main purpose is to create an employees management app.
 
 ## Requirements
-* Show a list of employees
+* Show the list of employees.
 
 ## Technologies
 Project is created with:
