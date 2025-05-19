@@ -1,4 +1,4 @@
-package com.kpilszak.employeesmanagement;
+package com.kpilszak.employeesmanagement.common;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.kpilszak.employeesmanagement;
+package com.kpilszak.employeesmanagement.common;
 
 public interface Coach {
     String getDailyWorkout();
