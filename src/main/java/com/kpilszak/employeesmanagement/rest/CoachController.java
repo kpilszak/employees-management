@@ -10,7 +10,7 @@ public class CoachController {
     private Coach coach;
 
     @Autowired
-    public CoachController(Coach coach) {
+    public void setCoach(Coach coach) {
         this.coach = coach;
     }
 
