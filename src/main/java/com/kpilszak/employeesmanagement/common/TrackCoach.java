@@ -1,4 +1,4 @@
-package com.kpilszak.employeesmanagement.rest;
+package com.kpilszak.employeesmanagement.common;
 
 import com.kpilszak.employeesmanagement.common.Coach;
 import org.springframework.stereotype.Component;
