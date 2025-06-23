@@ -1,5 +1,7 @@
 package com.kpilszak.employeesmanagement;
 
+import com.kpilszak.employeesmanagement.dao.StudentDAO;
+import com.kpilszak.employeesmanagement.entity.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,10 +15,22 @@ public class EmployeesManagementApplication {
     }
 
     @Bean
-    public CommandLineRunner commandLineRunner(String[] args) {
+    public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
-            System.out.println("Hello from Runner");
+            createStudent(studentDAO);
         };
     }
+
+    private void createStudent(StudentDAO studentDAO) {
+        System.out.println("Creating new student object ...");
+        Student student = new Student("Paul", "Doe", "paul@luv2code.com");
+
+        System.out.println("Saving the student ...");
+        studentDAO.save(student);
+
+        System.out.println("Saved student. Generated id: " + student.getId());
+    }
+
+
 
 }
