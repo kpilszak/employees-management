@@ -19,7 +19,7 @@ public class EmployeesManagementApplication {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
-            queryForStudentsByLastName(studentDAO);
+            deleteStudent(studentDAO);
         };
     }
 
@@ -75,5 +75,26 @@ public class EmployeesManagementApplication {
         for (Student student : students) {
             System.out.println(student);
         }
+    }
+
+    private void updateStudent(StudentDAO studentDAO) {
+        int studentId = 1;
+
+        System.out.println("Getting student with id: " + studentId);
+        Student student = studentDAO.findById(studentId);
+
+        System.out.println("Updating student...");
+        student.setFirstName("Scooby");
+
+        studentDAO.update(student);
+
+        System.out.println("Updated student: " + student);
+    }
+
+    private void deleteStudent(StudentDAO studentDAO) {
+        int studentId = 3;
+
+        System.out.println("Deleting student id: " + studentId);
+        studentDAO.delete(studentId);
     }
 }
