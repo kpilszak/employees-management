@@ -19,7 +19,7 @@ public class EmployeesManagementApplication {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
-            deleteStudent(studentDAO);
+            deleteAllStudents(studentDAO);
         };
     }
 
@@ -96,5 +96,11 @@ public class EmployeesManagementApplication {
 
         System.out.println("Deleting student id: " + studentId);
         studentDAO.delete(studentId);
+    }
+
+    private void deleteAllStudents(StudentDAO studentDAO) {
+        System.out.println("Deleting all students");
+        int numRowsDeleted = studentDAO.deleteAll();
+        System.out.println("Deleted row count: " + numRowsDeleted);
     }
 }
