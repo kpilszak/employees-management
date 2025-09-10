@@ -2,9 +2,10 @@ package com.kpilszak.employeesmanagement.rest;
 
 import com.kpilszak.employeesmanagement.entity.Student;
 import jakarta.annotation.PostConstruct;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class StudentRestController {
     public List<Student> getStudents() {
         return students;
     }
-    
+
     @GetMapping("/students/{studentId}")
     public Student getStudent(@PathVariable int studentId) {
         if ((studentId >= students.size()) || (studentId < 0)) {
@@ -34,16 +35,5 @@ public class StudentRestController {
         }
 
         return students.get(studentId);
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException e) {
-        StudentErrorResponse error = new StudentErrorResponse();
-
-        error.setStatus(HttpStatus.NOT_FOUND.value());
-        error.setMessage(e.getMessage());
-        error.setTimeStamp(System.currentTimeMillis());
-
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 }
