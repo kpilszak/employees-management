@@ -2,10 +2,7 @@ package com.kpilszak.employeesmanagement.rest;
 
 import com.kpilszak.employeesmanagement.entity.Employee;
 import com.kpilszak.employeesmanagement.service.EmployeeService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,5 +29,14 @@ public class EmployeeRestController {
         }
 
         return employee;
+    }
+
+    @PostMapping("/employees")
+    public Employee addEmployee(@RequestBody Employee employee) {
+        employee.setId(0);
+
+        Employee createdEmployee = employeeService.save(employee);
+
+        return createdEmployee;
     }
 }
