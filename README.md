@@ -1,6 +1,6 @@
 <h1 align="right">💼 Employees Management App</h1>
 
-A clean and modern **Spring Boot web application** designed for managing employees efficiently.
+A **Spring Boot web application** designed for managing employees.
 
 ---
 
@@ -19,10 +19,12 @@ It demonstrates modern **Spring Boot 3** development practices with clean archit
 ---
 
 ## 📌 Requirements
-The initial version includes:
-- ✅ Display a list of employees
-
-(Future updates may include employee creation, editing, and deletion.)
+The initial release includes the following core features:
+- ✅ View a complete list of employees
+- ✅ Display detailed information for a selected employee
+- ✅ Add new employees to the system
+- ✅ Update existing employee details
+- ✅ Remove employees from the database
 
 ---
 
