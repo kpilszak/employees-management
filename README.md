@@ -14,7 +14,7 @@ A **Spring Boot web application** designed for managing employees.
 
 ## 🧭 General Info
 This project is a **web-based employee management system** that allows users to view and manage employee data.  
-It demonstrates modern **Spring Boot 3** development practices with clean architecture and REST principles.
+It demonstrates **Spring Boot 3** development practices with REST principles.
 
 ---
 
