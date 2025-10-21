@@ -1,7 +1,5 @@
 package com.kpilszak.employeesmanagement;
 
-import com.kpilszak.employeesmanagement.dao.StudentDAO;
-import com.kpilszak.employeesmanagement.entity.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,7 +23,7 @@ public class EmployeesManagementApplication {
 
     private void createStudent(StudentDAO studentDAO) {
         System.out.println("Creating new student object ...");
-        Student student = new Student("Paul", "Doe", "paul@luv2code.com");
+        Student student = new Student("Paul", "Doe");
 
         System.out.println("Saving the student ...");
         studentDAO.save(student);
@@ -35,9 +33,9 @@ public class EmployeesManagementApplication {
 
     private void createMultipleStudents(StudentDAO studentDAO) {
         System.out.println("Creating 3 student objects ...");
-        Student student1 = new Student("John", "Doe", "john@luv2code.com");
-        Student student2 = new Student("Mary", "Public", "mary@luv2code.com");
-        Student student3 = new Student("Bonita", "Applebum", "bonita@luv2code.com");
+        Student student1 = new Student("John", "Doe");
+        Student student2 = new Student("Mary", "Public");
+        Student student3 = new Student("Bonita", "Applebum");
 
         System.out.println("Saving the students ...");
         studentDAO.save(student1);
@@ -47,7 +45,7 @@ public class EmployeesManagementApplication {
 
     private void readStudent(StudentDAO studentDAO) {
         System.out.println("Creating new student object ...");
-        Student student = new Student("Daffy", "Duck", "daffy@luv2code.com");
+        Student student = new Student("Daffy", "Duck");
 
         System.out.println("Saving the student ...");
         studentDAO.save(student);
