@@ -10,9 +10,9 @@ CREATE TABLE `employee` (
                             PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 INSERT INTO `employee` VALUES
-                           (1,'Leslie','Andrews','leslie@luv2code.com'),
-                           (2,'Emma','Baumgarten','emma@luv2code.com'),
-                           (3,'Avani','Gupta','avani@luv2code.com'),
-                           (4,'Yuri','Petrov','yuri@luv2code.com'),
-                           (5,'Juan','Vega','juan@luv2code.com');
+                           (1,'Leslie','Andrews','leslie@kpilszak.com'),
+                           (2,'Emma','Baumgarten','emma@kpilszak.com'),
+                           (3,'Avani','Gupta','avani@kpilszak.com'),
+                           (4,'Yuri','Petrov','yuri@kpilszak.com'),
+                           (5,'Juan','Vega','juan@kpilszak.com');
 
